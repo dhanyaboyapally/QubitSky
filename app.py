@@ -383,6 +383,26 @@ code { color: var(--accent) !important; background: var(--accent-soft) !importan
 .qk-dl dt { font-weight: 600; padding-right: 1.5rem; }
 .qk-dl dd { color: var(--muted); line-height: 1.6; font-size: 1.06rem; }
 @media (max-width: 680px) { .qk-dl { grid-template-columns: 1fr; } .qk-dl dt { border-bottom: 0; padding-bottom: .2rem; } }
+.qk-rq { margin-top: .6rem; border-top: 1px solid var(--line); }
+.qk-rq-row { display: grid; grid-template-columns: 56px minmax(0, 1fr) 132px; gap: 1.2rem; align-items: start; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+.qk-rq-id { font-family: 'Geist Mono', monospace; font-size: 1.05rem; color: var(--accent); padding-top: .15rem; }
+.qk-rq-row h3 { font-size: 1.14rem !important; margin: 0 0 .4rem !important; padding: 0 !important; font-weight: 600 !important; }
+.qk-rq-row p { color: var(--muted); margin: 0; line-height: 1.6; font-size: 1.06rem !important; }
+.qk-rq-row p b { color: var(--text); font-weight: 600; }
+.qk-status { justify-self: end; font-family: 'Geist Mono', monospace; font-size: .82rem; padding: .3rem .6rem; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; }
+.qk-status.answered { color: var(--accent); }
+.qk-status.partial { color: var(--neutral); }
+.qk-status.open { color: var(--muted); border-style: dashed; }
+@media (max-width: 760px) { .qk-rq-row { grid-template-columns: 44px 1fr; } .qk-status { grid-column: 2; justify-self: start; } }
+.qk-threats { margin-top: .6rem; display: grid; gap: .7rem; }
+.qk-threat { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 6fr) minmax(0, 3fr); gap: 1.4rem; align-items: start; padding: 1.15rem 1.25rem;
+  border-radius: var(--r-panel); background: var(--surface); border: 1px solid var(--line); }
+.qk-threat .risk { display: flex; gap: .7rem; align-items: flex-start; font-weight: 600; font-size: 1.06rem; color: var(--text); line-height: 1.45; }
+.qk-threat .risk .qk-mi { color: var(--accent); font-size: 24px; }
+.qk-threat .fix { color: var(--muted); font-size: 1.04rem; line-height: 1.6; }
+.qk-threat .proof { font-family: 'Geist Mono', monospace; font-size: .9rem; color: var(--text); line-height: 1.5; }
+.qk-threat .proof span { display: block; color: var(--muted); font-family: 'Geist', sans-serif; font-size: .88rem; margin-bottom: .2rem; }
+@media (max-width: 860px) { .qk-threat { grid-template-columns: 1fr; gap: .6rem; } }
 .qk-doc { display: grid; grid-template-columns: 48px 1fr; gap: .9rem; align-items: start; padding: 1.1rem 1.2rem; border-radius: var(--r-panel);
   background: var(--surface); border: 1px solid var(--line); margin-bottom: .6rem; min-height: 9.5rem; box-sizing: border-box; }
 .qk-doc .qk-tile-icon { color: var(--accent); }
@@ -527,6 +547,8 @@ def load_results() -> dict[str, Any]:
         "best_svm": _safe_read_json(RESULTS_DIR / "best_svm_configuration.json"),
         "qpu_results": _safe_read_csv(QUANTUM_DIR / "qpu_results.csv"),
         "hardware": _safe_read_json(QUANTUM_DIR / "hardware_analysis.json"),
+        "svm": _safe_read_csv(RESULTS_DIR / "svm_results.csv"),
+        "restarts": _safe_read_json(MODELS_DIR / "quantum_ideal" / "trainable_params_q4_n24_snr_clean_seed42.json"),
     }
 
 
@@ -974,6 +996,101 @@ def page_detect(data: dict[str, Any], theme: dict[str, str]) -> None:
         _table(pd.DataFrame({"Feature": [FEATURE_LABELS.get(n, n) for n in result["names"]], "Value": [f"{result['means'][n]:.4f}" for n in result["names"]]}))
 
 
+def _f1_by_size(data: dict[str, Any]) -> dict[str, dict[int, float]]:
+    ideal = data.get("ideal", pd.DataFrame())
+    if ideal.empty:
+        return {}
+    rows = ideal[ideal["evaluation_split"].eq("test") & ideal["experiment"].eq("matched_sample_clean_model_robustness")
+                 & ideal["evaluation_snr"].eq("clean") & ideal["feature_count"].eq(4) & ideal["training_snr"].eq("clean")]
+    return {model: frame.groupby("training_size_requested")["f1"].mean().to_dict() for model, frame in rows.groupby("model")}
+
+
+def _research_questions(data: dict[str, Any], f1: dict[str, float], hardware: dict[str, Any]) -> None:
+    sizes = _f1_by_size(data)
+    svm, mlp, fixed = sizes.get("rbf_svm", {}), sizes.get("small_mlp", {}), sizes.get("fixed_qsvc", {})
+    noise = data.get("svm", pd.DataFrame())
+    recall = {}
+    if not noise.empty:
+        robust = noise[noise["experiment"].eq("clean_model_noise_robustness")]
+        recall = robust.groupby(robust["evaluation_snr"].astype(str))["drone_recall"].mean().to_dict()
+    sim, real = f1.get("Trainable QSVC"), f1.get("Real QPU")
+    rows = []
+    if svm.get(24) is not None and mlp.get(70) is not None:
+        rows.append(("Q1", "How do the models cope as training recordings get scarce?", "partial",
+                     f"With four features, the neural network improved from F1 <b>{mlp[24]:.3f}</b> to <b>{mlp[70]:.3f}</b> as training grew from 24 to "
+                     f"70 recordings. The SVM stayed between <b>{min(svm.values()):.3f}</b> and <b>{max(svm.values()):.3f}</b>, and the fixed quantum kernel "
+                     f"did not improve ({fixed.get(24, float('nan')):.3f} at 24, {fixed.get(70, float('nan')):.3f} at 70). The trainable quantum kernel was "
+                     f"trained at 24 recordings, the size it ran at on hardware."))
+    if recall.get("clean") is not None and recall.get("0") is not None:
+        hw_text = f" Hardware noise is a second layer: the same quantum model scored F1 <b>{sim:.3f}</b> in simulation and <b>{real:.3f}</b> on real hardware." if sim and real else ""
+        rows.append(("Q2", "How do drone recall and false alarms change as noise increases?", "answered",
+                     f"Added audio noise hurts. Averaged over every configuration, the clean-trained SVM caught <b>{recall['clean']:.0%}</b> of drones on clean "
+                     f"audio and <b>{recall['0']:.0%}</b> at 0 dB, where the noise is as loud as the recording.{hw_text}"))
+    if svm.get(24) is not None and mlp.get(24) is not None and svm.get(70) is not None:
+        rows.append(("Q3", "Does extra model capacity help when the features stay the same?", "partial",
+                     f"It depends on how much data there is. On the same four features, the SVM beat the neural network with 24 recordings "
+                     f"(<b>{svm[24]:.3f}</b> against <b>{mlp[24]:.3f}</b>), and the neural network won with 70 (<b>{mlp[70]:.3f}</b> against "
+                     f"<b>{svm[70]:.3f}</b>). The larger network, Model C, has not been trained yet."))
+    rows.append(("Q4", "Does a full time-frequency representation justify its extra cost?", "open",
+                 "Model D, a spectrogram CNN, is implemented on the classical branch but has not been trained on this data split yet."))
+    if sim and f1.get("SVM"):
+        rows.append(("Q5", "With matched inputs and data, does a quantum model beat the classical ones?", "answered",
+                     f"Not yet. On the same 24 recordings and four features, the classical SVM scored F1 <b>{f1['SVM']:.3f}</b>, the trainable quantum "
+                     f"kernel <b>{sim:.3f}</b> in simulation{f' and <b>{real:.3f}</b> on real hardware' if real else ''}. The section on what it would take "
+                     f"explains the gap."))
+    labels = {"answered": "Answered", "partial": "Partly answered", "open": "Open"}
+    _html(
+        '<div class="qk-section"><h2>The questions we set out to answer</h2><p class="qk-lead">Five research questions from our classical study '
+        'design, <i>Can a Computer Hear a Drone?</i>, and what our recorded results say about each one so far.</p></div><div class="qk-rq">'
+        + "".join(f'<div class="qk-rq-row"><div class="qk-rq-id">{qid}</div><div><h3>{question}</h3><p>{finding}</p></div>'
+                  f'<span class="qk-status {status}">{labels[status]}</span></div>' for qid, question, status, finding in rows)
+        + "</div>"
+    )
+
+
+def _validity(data: dict[str, Any], f1: dict[str, float], hardware: dict[str, Any]) -> None:
+    matched = _matched_model_results(data)
+    drones = non_drones = None
+    if not matched.empty:
+        tn_fp, fn_tp = json.loads(matched.iloc[0]["confusion_matrix"])
+        drones, non_drones = sum(fn_tp), sum(tn_fp)
+    restarts = data.get("restarts", {}).get("restarts", [])
+    best_val = max((r["validation_f1"] for r in restarts), default=None)
+    drift = hardware.get("drift") if hardware else None
+    mlp24 = _f1_by_size(data).get("small_mlp", {}).get(24)
+    rows = [
+        ("dataset", "The model could learn which dataset a clip came from instead of the drone",
+         "One-second ITU-ARIS clips used to be padded to three seconds, so a rule that only checked the dataset scored F1 0.690. Every source is now "
+         "cut into one-second windows with no padding.", "Svanström test drones recognised", "50% before, 83% after"),
+        ("call_split", "Clips from one recording could land in both training and test",
+         "Recordings are split before windowing. Noisy copies and their background donors stay in the same split, and ITU-ARIS interval groups are kept together.",
+         "Recordings shared between splits", "0"),
+        ("casino", "A lucky random seed could inflate the quantum score",
+         "Unseeded training gave test F1 anywhere from 0.43 to 0.71. Training is now seeded, with 10 restarts chosen on validation data only.",
+         "Selected restart", f"validation F1 {best_val:.3f}" if best_val is not None else "seeded"),
+        ("lock", "Settings could be tuned on the test set",
+         "Every model and setting is chosen on the 80 validation recordings. The test recordings are scored once at the end, and the demo samples are held-out test clips.",
+         "Held-out test set", f"{drones} drone, {non_drones} non-drone" if drones else "98 recordings"),
+        ("visibility", "Accuracy can hide missed drones",
+         "Results report F1, balanced accuracy, drone recall and false alarms, never accuracy alone.",
+         "A detector that always says no drone", f"{non_drones / (drones + non_drones):.0%} accuracy, 0 drones found" if drones else "high accuracy, no drones"),
+        ("memory", "A simulation might not match real hardware",
+         "The frozen model ran on ibm_kingston inside one calibration window, and the first batch was re-measured after a chip recalibration.",
+         "Agreement between the two runs", f"correlation {drift['correlation']:.3f}" if drift else "re-measured"),
+        ("balance", "The classical comparison might be unfair",
+         "Classical models train on the same 24 recordings and averaged features as the quantum model. We fixed a labelling bug that compared against models "
+         "trained on 70 recordings, and an early-stopping bug that left the neural network untrained.",
+         "Neural network F1 after the fix", f"0.000 to {mlp24:.3f}" if mlp24 is not None else "retrained"),
+    ]
+    _html(
+        '<div class="qk-section"><h2>How we kept the results honest</h2><p class="qk-lead">Our study design lists the ways an experiment can give a '
+        'pleasing answer for the wrong reason. These are the ones that applied here, and what we did about each.</p></div><div class="qk-threats">'
+        + "".join(f'<div class="qk-threat"><div class="risk">{_mi(icon)}<span>{risk}</span></div><div class="fix">{fix}</div>'
+                  f'<div class="proof"><span>{label}</span>{value}</div></div>' for icon, risk, fix, label, value in rows)
+        + "</div>"
+    )
+
+
 def _classical_docs() -> None:
     docs = [doc for doc in CLASSICAL_DOCS if (DOCS_DIR / doc["file"]).is_file()]
     if not docs:
@@ -1039,6 +1156,8 @@ and on a real IBM quantum computer.</p></div>
             table.loc[len(table)] = ["Real QPU", qpu["f1"], qpu["balanced_accuracy"], qpu["drone_recall"], qpu["non_drone_recall"]]
         table.columns = ["Model", "F1", "Balanced accuracy", "Drone recall", "Non-drone recall"]
         _table(table.round(3))
+
+    _research_questions(data, f1, hardware)
 
     final = data.get("final", pd.DataFrame())
     ladder = [("Ideal quantum simulator", "Ideal"), ("Finite-shot zero-noise simulator", "Finite shots"),
@@ -1121,6 +1240,7 @@ and on a real IBM quantum computer.</p></div>
 """
         )
 
+    _validity(data, f1, hardware)
     _classical_docs()
 
     st.markdown("")
