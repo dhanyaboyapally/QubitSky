@@ -37,7 +37,8 @@ ASSETS_DIR = PROJECT_ROOT / "assets"
 SAMPLES_DIR = ASSETS_DIR / "samples"
 LIVE_DETECTOR_PATH = MODELS_DIR / "quantum" / "live_detector.json"
 DOCS_DIR = PROJECT_ROOT / "docs"
-DOCS_URL = "https://github.com/dhanyaboyapally/QubitSky/blob/main/docs/"
+# The write-ups live where they were written, on the classical branch of the original repo.
+DOCS_URL = "https://github.com/J-D-J123/QSky-Mizzou-Quantum-Hackathon/blob/Classical/joey-ABCD-Models/docs/"
 CLASSICAL_DOCS = [
     {"file": "classical_approach_beginner.pdf", "title": "Can a computer hear a drone?", "kind": "Accessible paper, 18 pages",
      "summary": "A plain-language walk through the four classical baselines, A to D, for readers with no machine-learning background, "
