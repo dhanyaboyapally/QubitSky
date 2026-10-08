@@ -1,0 +1,30 @@
+{
+  "captured_utc": "2026-10-07T20:50:57.591609+00:00",
+  "describes": "docs/classical_approach_beginner.tex",
+  "files": {
+    "qsky_classical/cli.py": "4a4f840f0924ef409c104c6177920cc355ab9bbb0cc3b8f573ef9f0dad64a3d7",
+    "qsky_classical/data.py": "ad15a62a1bd2a1842054eec087423f8c706c6a39eef8852faba31e6e5674f040",
+    "qsky_classical/models.py": "9c3006a7a33b24113fab227c975a3095f9697187fecc1887c289a1ecbeb843f7",
+    "qsky_classical/cnn.py": "cb9812e3d9949c1b1af281883310b481c132b8ed2259b46d40fa47e18a96807c",
+    "qsky_classical/matched.py": "fdc3844d02cc4f514b55406447442198aabd4728e95a4e40ece817d90ca22584",
+    "qsky_classical/dhanya.py": "236223dc0430af8c4f6f4a1311b1badcfc7c59cfa35f0611b53ba26320eaf331",
+    "qsky_classical/artifacts.py": "d327176768b295f96cf4d7e8161ed50a6702021d7f4340b9d7fdaad2e8594d98",
+    "qsky_classical/subsets.py": "b4089413ca7ded6473d1b2da5a2190e0908ecdd3f29ef6b870afe4a6d92f5523",
+    "pyproject.toml": "514b78098c448c56da26fc7f2ffc2fa655eab116fa1332fc1adc21f76d21d711"
+  },
+  "protocol_and_dataset_notes": {
+    "BENCHMARK_PROTOCOL.md": "62e4c43aa193af85423ee0f88db36b0952f1d5dcadde02346b230d766d85a073",
+    "QubitSky_DATASETS.md": "f23b8904cb52ac21b7d5c4dfde716920d1176939adcfedfaeb53e440d6e0488b",
+    "DATASET_SETUP.md": "ebfe668a02040c518d408773cc7a444c15e9cb92b53f5bd8b8c3cd766ad6eb2c",
+    "scripts/download_datasets.py": "5e7c1b6b3b1787f32005fe31356323b37034ce60b79b2665803d99df74598a4c"
+  },
+  "publisher_urls": [
+    "https://zenodo.org/records/6459183",
+    "https://github.com/karolpiczak/ESC-50",
+    "https://urbansounddataset.weebly.com/urbansound8k.html",
+    "https://data.nasa.gov/dataset/small-uas-flyover-acoustics-data",
+    "https://zenodo.org/records/5500576",
+    "https://zenodo.org/records/22682339",
+    "https://huggingface.co/datasets/imm61/itu-aris-lab-acoustic-drone-dataset"
+  ]
+}

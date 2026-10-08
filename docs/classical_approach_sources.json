@@ -1,0 +1,27 @@
+{
+  "captured_utc": "2026-10-07T20:23:50.017529+00:00",
+  "files": {
+    "qsky_classical/cli.py": "5a0051363eda1a5efd5863ed6fc7dba6815a88ce7307019f977d94a9526e991c",
+    "qsky_classical/data.py": "ad15a62a1bd2a1842054eec087423f8c706c6a39eef8852faba31e6e5674f040",
+    "qsky_classical/models.py": "9c3006a7a33b24113fab227c975a3095f9697187fecc1887c289a1ecbeb843f7",
+    "qsky_classical/cnn.py": "ae2e4043c9a137579f23bfad98e11028b4f861d0eb316879d58728693ad9c3de",
+    "pyproject.toml": "93c56ceae21c8af77132df9f0f1ae2888bc3c303083474217a5e011f17916986"
+  },
+  "dataset_reference_update": {
+    "checked_utc": "2026-10-07T20:34:29.944298+00:00",
+    "local_files": {
+      "QubitSky_DATASETS.md": "f23b8904cb52ac21b7d5c4dfde716920d1176939adcfedfaeb53e440d6e0488b",
+      "DATASET_SETUP.md": "ebfe668a02040c518d408773cc7a444c15e9cb92b53f5bd8b8c3cd766ad6eb2c",
+      "scripts/download_datasets.py": "5e7c1b6b3b1787f32005fe31356323b37034ce60b79b2665803d99df74598a4c"
+    },
+    "publisher_urls": [
+      "https://zenodo.org/records/6459183",
+      "https://github.com/karolpiczak/ESC-50",
+      "https://urbansounddataset.weebly.com/urbansound8k.html",
+      "https://data.nasa.gov/dataset/small-uas-flyover-acoustics-data",
+      "https://zenodo.org/records/5500576",
+      "https://zenodo.org/records/22682339",
+      "https://huggingface.co/datasets/imm61/itu-aris-lab-acoustic-drone-dataset"
+    ]
+  }
+}

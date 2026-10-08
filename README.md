@@ -33,6 +33,8 @@ Hardware kernel values correlate about 0.90 with the ideal kernel but are compre
 
 `run_ibm_qpu.py` now takes `--backend` (`ibm_pittsburgh` default, `ibm_kingston`, `ibm_miami`) with per-backend layouts and calibration references, estimates QPU time including the repetition delay (the old estimate was about 70x too low), and offers `--skip-validation-kernel` and 256 shots. Example: `RUN_REAL_QPU=YES python src/run_ibm_qpu.py --backend ibm_kingston --confirm-real-qpu --submit-after-review --shots 512`, run once per batch.
 
+Documents: `docs/classical_approach_beginner.pdf` (accessible paper, *Can a Computer Hear a Drone?*) and `docs/classical_approach.pdf` (technical report) describe the classical baselines A to D and the protocol for a fair quantum comparison. Both are linked from the Research and About pages.
+
 To regenerate everything: place the four datasets in `data/raw/` (see Data below), then run `build_master_metadata.py`, `prepare_dataset.py`, `train_svm.py`, `train_mlp.py`, `quantum_kernel_simulator.py` and `quantum_noise_experiments.py`. Add `--store-noisy-audio` to `prepare_dataset.py` if a model needs the noisy audio itself rather than its features.
 
 ## Research Question
@@ -251,4 +253,4 @@ Behavior and guardrails:
 - No IBM Runtime submission, polling, cancellation, or QPU-control path is called from the app.
 - DETECT performs local inference only, using existing saved model/scaler artifacts.
 - The HOME hero image is loaded from the project-root `background.jpg`.
-- Optional ambience can be added as `assets/ambience.mp3` and is off by default.
+- DETECT runs the trained 4-qubit quantum kernel live (`src/live_quantum.py`, built by `src/build_live_detector.py`), with an ibm_kingston-response mode and a classical benchmark.
