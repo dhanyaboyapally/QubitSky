@@ -1,0 +1,5 @@
+split,files,unique_recordings,drone_recordings,non_drone_recordings,noisy_clips,counts_by_source,counts_by_scenario,counts_by_snr,generated_noisy_clips_total
+train,30198,301,35,266,24144,"{""ddl"": 19220, ""esc50"": 8078, ""svanstrom"": 2900}","{""airspace"": 1967, ""battlefield/noisy-field"": 1967, ""infrastructure"": 2297, ""perimeter"": 2151, ""wildlife"": 3464}","{""0"": 6036, ""10"": 6036, ""20"": 6036, ""5"": 6036, ""clean"": 6054}",35016
+validation,6412,80,14,66,5124,"{""ddl"": 4115, ""esc50"": 1647, ""svanstrom"": 650}","{""airspace"": 467, ""battlefield/noisy-field"": 467, ""infrastructure"": 250, ""perimeter"": 425, ""wildlife"": 630}","{""0"": 1281, ""10"": 1281, ""20"": 1281, ""5"": 1281, ""clean"": 1288}",35016
+test,7197,98,16,82,5748,"{""ddl"": 4120, ""esc50"": 2127, ""svanstrom"": 950}","{""airspace"": 1050, ""battlefield/noisy-field"": 1050, ""infrastructure"": 425, ""perimeter"": 376, ""wildlife"": 826}","{""0"": 1437, ""10"": 1437, ""20"": 1437, ""5"": 1437, ""clean"": 1449}",35016
+nasa_external,3204,62,0,0,0,"{""nasa_external"": 3204}",{},"{""clean"": 3204}",35016

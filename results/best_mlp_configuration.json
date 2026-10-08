@@ -1,0 +1,119 @@
+{
+  "selected_on": "internal validation only; clean training condition",
+  "best_external_model": {
+    "model": "mlp",
+    "feature_count": 6,
+    "train_size_requested": 70,
+    "train_size_actual": 70,
+    "train_snr": "clean",
+    "validation_f1": 0.8976897689768977,
+    "validation_balanced_accuracy": 0.8711477496664586,
+    "validation_drone_recall": 0.9405255878284924,
+    "model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f6_n70_train_snr_clean.joblib",
+    "hyperparameters": {
+      "hidden_layer_sizes": [
+        16,
+        8
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "batch_size": 16,
+      "early_stopping": true,
+      "n_iter": 115,
+      "early_stopping_source": "fixed recording-disjoint validation split"
+    }
+  },
+  "best_per_feature_and_training_size": [
+    {
+      "model": "mlp",
+      "feature_count": 4,
+      "train_size_requested": 24,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8108108108108109,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f4_n24_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 4,
+      "train_size_requested": 50,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.7970627503337784,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f4_n50_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 4,
+      "train_size_requested": 70,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8059895833333334,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f4_n70_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 5,
+      "train_size_requested": 24,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8389993585631815,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f5_n24_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 5,
+      "train_size_requested": 50,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8015267175572519,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f5_n50_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 5,
+      "train_size_requested": 70,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8138424821002387,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f5_n70_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 6,
+      "train_size_requested": 24,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8721311475409836,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f6_n24_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 6,
+      "train_size_requested": 50,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.831302116741501,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f6_n50_train_snr_clean.joblib"
+    },
+    {
+      "model": "mlp",
+      "feature_count": 6,
+      "train_size_requested": 70,
+      "selected_train_snr": "clean",
+      "selected_validation_f1": 0.8976897689768977,
+      "selected_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/mlp/mlp_f6_n70_train_snr_clean.joblib"
+    }
+  ],
+  "nasa_metrics_or_confidence": {
+    "accuracy": NaN,
+    "precision": NaN,
+    "recall": NaN,
+    "f1": NaN,
+    "roc_auc": NaN,
+    "balanced_accuracy": NaN,
+    "drone_recall": NaN,
+    "non_drone_recall": NaN,
+    "confusion_matrix": "",
+    "nasa_labeled_rows": 0,
+    "nasa_recordings": 62,
+    "predicted_drone_fraction": 0.20006242197253432,
+    "mean_drone_probability": 0.1930816835785739,
+    "std_drone_probability": 0.18538745598553677,
+    "drone_probability_q10": 0.01983094207180518,
+    "drone_probability_median": 0.1297615077078227,
+    "drone_probability_q90": 0.4973120828221034
+  }
+}

@@ -1,0 +1,68 @@
+NOISE 0pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (0.32s)
+  validation kernel: computed (2.26s)
+  test kernel: computed (2.73s)
+NOISE 0.1pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (3.10s)
+  validation kernel: computed (20.57s)
+  test kernel: computed (25.19s)
+NOISE 0.25pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (3.11s)
+  validation kernel: computed (20.62s)
+  test kernel: computed (25.03s)
+NOISE 0.5pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (2.87s)
+  validation kernel: computed (20.03s)
+  test kernel: computed (24.28s)
+NOISE 1pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (2.87s)
+  validation kernel: computed (20.21s)
+  test kernel: computed (25.76s)
+NOISE 2pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (2.94s)
+  validation kernel: computed (20.11s)
+  test kernel: computed (26.83s)
+NOISE gate_only_0p5pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (3.08s)
+  validation kernel: computed (19.18s)
+  test kernel: computed (22.65s)
+NOISE readout_only_0p5pct: estimated fidelity circuits=4,548; shots=1024; cache status checked per matrix; expected runtime depends on Aer CPU speed
+  training kernel: computed (0.44s)
+  validation kernel: computed (3.04s)
+  test kernel: computed (3.74s)
+NOISY SIMULATOR SUMMARY
+noise_label  accuracy       f1  balanced_accuracy  drone_recall  non_drone_recall  kernel_computation_seconds
+       0pct  0.653061 0.451613           0.742378         0.875          0.609756                    5.308023
+     0.1pct  0.642857 0.444444           0.736280         0.875          0.597561                   48.858556
+    0.25pct  0.642857 0.444444           0.736280         0.875          0.597561                   48.762865
+     0.5pct  0.622449 0.430769           0.724085         0.875          0.573171                   47.178656
+       1pct  0.612245 0.424242           0.717988         0.875          0.560976                   48.839857
+       2pct  0.622449 0.430769           0.724085         0.875          0.573171                   49.873684
+THRESHOLDS
+{
+  "f1_at_least_mlp": {
+    "threshold_f1": 0.0,
+    "status": "still_meets_threshold_at_highest_tested_error",
+    "largest_passing_error": 0.02,
+    "first_failing_error": null
+  },
+  "f1_at_least_svm": {
+    "threshold_f1": 0.4918032786885246,
+    "status": "below_threshold_at_zero_or_all_levels",
+    "largest_passing_error": null,
+    "first_failing_error": 0.0
+  },
+  "balanced_accuracy_at_least_best_classical": {
+    "threshold_balanced_accuracy": 0.7858231707317074,
+    "status": "below_threshold_at_zero_or_all_levels",
+    "largest_passing_error": null,
+    "first_failing_error": 0.0
+  }
+}
+ERROR ABLATION
+        noise_label       f1  balanced_accuracy  drone_recall  non_drone_recall
+   gate_only_0p5pct 0.430769           0.724085         0.875          0.573171
+readout_only_0p5pct 0.444444           0.736280         0.875          0.597561
+Saved noisy results: /Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/noisy_simulator_results.csv
+Saved kernel cache: /Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/noisy_kernels
+Saved Stage 7 frozen config (not submitted): /Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum/stage7_frozen_config.json

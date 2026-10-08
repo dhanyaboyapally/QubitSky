@@ -1,0 +1,29 @@
+{
+  "fingerprint": "a3346506ea7ec9df41e41c478c7d5fcebf0118e0ece361ab76a29c9953fce673",
+  "cache_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/noisy_kernels/validation_4q_24train_noise_1pct_1024shots_trainable_product_reps1_linear_seed46_521a1c896f.npy",
+  "shape": [
+    80,
+    24
+  ],
+  "noise_metadata": {
+    "noise_type": "combined",
+    "noise_label": "1pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.001,
+    "two_qubit_error": 0.01,
+    "readout_error": 0.005,
+    "shots": 1024,
+    "seed": 46,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips"
+  },
+  "theta": [
+    -0.30404135217687256,
+    1.3040413521768726,
+    -0.30404135217687256,
+    1.3040413521768726
+  ],
+  "sample_ids_hash": "cd0d690ad7c8da6f10e344e165d469b0388bb39ceef310abbc9a8eef365c938d",
+  "kernel_evaluations": 1920,
+  "computed_seconds": 20.210661541001173
+}

@@ -1,0 +1,2 @@
+model,evaluation_split,shots,backend_name,physical_qubits,circuit_count,accuracy,precision,recall,f1,roc_auc,balanced_accuracy,drone_recall,non_drone_recall,confusion_matrix
+backend_derived_noisy_simulator,clean_test,512,backend-calibration-derived-Aer,"[42, 43, 44, 45]",4548,0.6632653061224489,0.3111111111111111,0.875,0.4590163934426229,0.8376524390243902,0.7484756097560976,0.875,0.6219512195121951,"[[51, 31], [2, 14]]"

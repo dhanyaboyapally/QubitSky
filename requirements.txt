@@ -1,0 +1,16 @@
+# CPU-only local environment; no CUDA/GPU framework is required.
+numpy>=2.0,<3.0
+pandas>=2.2,<3.0
+scipy>=1.13
+librosa>=0.10.2
+soundfile>=0.12
+certifi>=2024.2.2
+scikit-learn>=1.5
+matplotlib>=3.8
+plotly>=5.24
+streamlit>=1.38
+qiskit>=1.2,<3.0
+qiskit-aer>=0.15,<1.0
+qiskit-machine-learning>=0.8,<1.0
+qiskit-ibm-runtime>=0.30,<1.0
+huggingface_hub>=0.25

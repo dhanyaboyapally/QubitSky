@@ -1,0 +1,2067 @@
+{
+  "status": "completed",
+  "backend": "ibm_kingston",
+  "physical_layout": [
+    42,
+    43,
+    44,
+    45
+  ],
+  "shots": 512,
+  "total_circuits": 4548,
+  "total_executions": 2328576,
+  "circuits_per_job_target": 1137,
+  "maximum_executions_per_job": 10000000,
+  "jobs": [
+    {
+      "job_id": "db3dsfqmb58s7387ij90",
+      "backend": "ibm_kingston",
+      "physical_layout": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "circuit_index_start": 0,
+      "circuit_index_end_exclusive": 1137,
+      "circuit_index_range_inclusive": [
+        0,
+        1136
+      ],
+      "circuit_count": 1137,
+      "execution_count": 582144,
+      "shots": 512,
+      "split_circuit_counts": {
+        "training": 276,
+        "validation": 861,
+        "test": 0
+      },
+      "submitted_at_utc": "2026-10-08T00:05:19.311832+00:00",
+      "status": "completed",
+      "calibration_snapshot": {
+        "captured_at_utc": "2026-10-08T00:05:17.026019+00:00",
+        "backend_name": "ibm_kingston",
+        "operational": true,
+        "status_msg": "active",
+        "pending_jobs": 0,
+        "physical_layout": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "selected_median_errors": {
+          "selected_median_1q_gate_error": 0.000314879719117332,
+          "selected_median_2q_gate_error": 0.001660492043967371,
+          "selected_median_readout_error": 0.00439453125
+        },
+        "readout_error_by_physical_qubit": {
+          "42": 0.00390625,
+          "43": 0.0048828125,
+          "44": 0.0029296875,
+          "45": 0.006103515625
+        },
+        "compiled_gate_calibration_errors": [
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          }
+        ],
+        "properties_last_update": "2026-10-07 18:13:12-05:00"
+      },
+      "result_cache": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/qpu_job_cache/db3dsfqmb58s7387ij90.json",
+      "completed_at_utc": "2026-10-08T00:08:14.521465+00:00"
+    },
+    {
+      "job_id": "db3e2tg4qg6s73c0i3r0",
+      "backend": "ibm_kingston",
+      "physical_layout": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "circuit_index_start": 1137,
+      "circuit_index_end_exclusive": 2274,
+      "circuit_index_range_inclusive": [
+        1137,
+        2273
+      ],
+      "circuit_count": 1137,
+      "execution_count": 582144,
+      "shots": 512,
+      "split_circuit_counts": {
+        "training": 0,
+        "validation": 1059,
+        "test": 78
+      },
+      "submitted_at_utc": "2026-10-08T00:19:02.928825+00:00",
+      "status": "completed",
+      "calibration_snapshot": {
+        "captured_at_utc": "2026-10-08T00:19:00.592596+00:00",
+        "backend_name": "ibm_kingston",
+        "operational": true,
+        "status_msg": "active",
+        "pending_jobs": 1,
+        "physical_layout": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "selected_median_errors": {
+          "selected_median_1q_gate_error": 0.000314879719117332,
+          "selected_median_2q_gate_error": 0.001660492043967371,
+          "selected_median_readout_error": 0.00439453125
+        },
+        "readout_error_by_physical_qubit": {
+          "42": 0.00390625,
+          "43": 0.0048828125,
+          "44": 0.0029296875,
+          "45": 0.006103515625
+        },
+        "compiled_gate_calibration_errors": [
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          }
+        ],
+        "properties_last_update": "2026-10-07 18:13:12-05:00"
+      },
+      "result_cache": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/qpu_job_cache/db3e2tg4qg6s73c0i3r0.json",
+      "completed_at_utc": "2026-10-08T00:21:59.445765+00:00"
+    },
+    {
+      "job_id": "db3e5bclf4us73c14790",
+      "backend": "ibm_kingston",
+      "physical_layout": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "circuit_index_start": 2274,
+      "circuit_index_end_exclusive": 3411,
+      "circuit_index_range_inclusive": [
+        2274,
+        3410
+      ],
+      "circuit_count": 1137,
+      "execution_count": 582144,
+      "shots": 512,
+      "split_circuit_counts": {
+        "training": 0,
+        "validation": 0,
+        "test": 1137
+      },
+      "submitted_at_utc": "2026-10-08T00:24:13.920067+00:00",
+      "status": "completed",
+      "calibration_snapshot": {
+        "captured_at_utc": "2026-10-08T00:24:11.568382+00:00",
+        "backend_name": "ibm_kingston",
+        "operational": true,
+        "status_msg": "active",
+        "pending_jobs": 1,
+        "physical_layout": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "selected_median_errors": {
+          "selected_median_1q_gate_error": 0.000314879719117332,
+          "selected_median_2q_gate_error": 0.001660492043967371,
+          "selected_median_readout_error": 0.00439453125
+        },
+        "readout_error_by_physical_qubit": {
+          "42": 0.00390625,
+          "43": 0.0048828125,
+          "44": 0.0029296875,
+          "45": 0.006103515625
+        },
+        "compiled_gate_calibration_errors": [
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          }
+        ],
+        "properties_last_update": "2026-10-07 18:13:12-05:00"
+      },
+      "result_cache": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/qpu_job_cache/db3e5bclf4us73c14790.json",
+      "completed_at_utc": "2026-10-08T00:27:57.765647+00:00"
+    },
+    {
+      "job_id": "db3e9sqmb58s7387j7c0",
+      "backend": "ibm_kingston",
+      "physical_layout": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "circuit_index_start": 3411,
+      "circuit_index_end_exclusive": 4548,
+      "circuit_index_range_inclusive": [
+        3411,
+        4547
+      ],
+      "circuit_count": 1137,
+      "execution_count": 582144,
+      "shots": 512,
+      "split_circuit_counts": {
+        "training": 0,
+        "validation": 0,
+        "test": 1137
+      },
+      "submitted_at_utc": "2026-10-08T00:33:55.736959+00:00",
+      "status": "completed",
+      "calibration_snapshot": {
+        "captured_at_utc": "2026-10-08T00:33:53.751310+00:00",
+        "backend_name": "ibm_kingston",
+        "operational": true,
+        "status_msg": "active",
+        "pending_jobs": 0,
+        "physical_layout": [
+          42,
+          43,
+          44,
+          45
+        ],
+        "selected_median_errors": {
+          "selected_median_1q_gate_error": 0.000314879719117332,
+          "selected_median_2q_gate_error": 0.001660492043967371,
+          "selected_median_readout_error": 0.00439453125
+        },
+        "readout_error_by_physical_qubit": {
+          "42": 0.00390625,
+          "43": 0.0048828125,
+          "44": 0.0029296875,
+          "45": 0.006103515625
+        },
+        "compiled_gate_calibration_errors": [
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              44,
+              45
+            ],
+            "error": 0.001660492043967371
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              43,
+              44
+            ],
+            "error": 0.0016261482681240724
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "cz",
+            "physical_qubits": [
+              42,
+              43
+            ],
+            "error": 0.0025970670365490223
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.00042721722311667317
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              42
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0004953481817199782
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              43
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0003775910184431641
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              44
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          },
+          {
+            "gate": "sx",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.000314879719117332
+          },
+          {
+            "gate": "rz",
+            "physical_qubits": [
+              45
+            ],
+            "error": 0.0
+          }
+        ],
+        "properties_last_update": "2026-10-07 18:13:12-05:00"
+      },
+      "result_cache": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/qpu_job_cache/db3e9sqmb58s7387j7c0.json",
+      "completed_at_utc": "2026-10-08T00:36:50.455453+00:00"
+    }
+  ],
+  "resume_started_at_utc": "2026-10-08T00:33:53.676648+00:00",
+  "paused_at_utc": "2026-10-08T00:27:57.767274+00:00",
+  "completed_at_utc": "2026-10-08T00:36:50.483256+00:00",
+  "matrix_shapes": {
+    "training": [
+      24,
+      24
+    ],
+    "validation": [
+      80,
+      24
+    ],
+    "test": [
+      98,
+      24
+    ]
+  },
+  "training_kernel_symmetric": true,
+  "result_cache": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/qpu_job_cache/assembled_kernel_metrics.json"
+}

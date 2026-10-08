@@ -1,0 +1,9 @@
+{
+  "x_hash": "2e50c148b0a9edaee5783106aa7df95c0553981b0e98d8782678a55874336248",
+  "y_hash": "aa3d87b9445f5b218d56c1e9aa0090134d08ea60c14338a4284360803e9adb2d",
+  "shape": [
+    98,
+    70
+  ],
+  "kernel": "CachedFidelityQuantumKernel"
+}

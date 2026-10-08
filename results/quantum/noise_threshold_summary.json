@@ -1,0 +1,70 @@
+{
+  "classical_baselines_from_stage5_matched_aggregated_test": {
+    "rbf_svm": {
+      "accuracy": 0.6836734693877551,
+      "f1": 0.4918032786885246,
+      "balanced_accuracy": 0.7858231707317074,
+      "drone_recall": 0.9375,
+      "non_drone_recall": 0.6341463414634146
+    },
+    "small_mlp": {
+      "accuracy": 0.7346938775510204,
+      "f1": 0.4090909090909091,
+      "balanced_accuracy": 0.6653963414634146,
+      "drone_recall": 0.5625,
+      "non_drone_recall": 0.7682926829268293
+    },
+    "trainable_qsvc": {
+      "accuracy": 0.6428571428571429,
+      "f1": 0.4444444444444444,
+      "balanced_accuracy": 0.7362804878048781,
+      "drone_recall": 0.875,
+      "non_drone_recall": 0.5975609756097561
+    }
+  },
+  "quantum_competitive_thresholds": {
+    "f1_at_least_mlp": {
+      "threshold_f1": 0.4090909090909091,
+      "status": "still_meets_threshold_at_highest_tested_error",
+      "largest_passing_error": 0.02,
+      "first_failing_error": null
+    },
+    "f1_at_least_svm": {
+      "threshold_f1": 0.4918032786885246,
+      "status": "below_threshold_at_zero_or_all_levels",
+      "largest_passing_error": null,
+      "first_failing_error": 0.0
+    },
+    "balanced_accuracy_at_least_best_classical": {
+      "threshold_balanced_accuracy": 0.7858231707317074,
+      "status": "below_threshold_at_zero_or_all_levels",
+      "largest_passing_error": null,
+      "first_failing_error": 0.0
+    }
+  },
+  "tested_combined_error_levels": [
+    0.0,
+    0.001,
+    0.0025,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "threshold_resolution_note": "Intervals are bounded only by tested synthetic noise levels; no finer threshold is claimed.",
+  "trainable_stage5_ideal_baseline": {
+    "accuracy": 0.6428571428571429,
+    "f1": 0.4444444444444444,
+    "balanced_accuracy": 0.7362804878048781,
+    "drone_recall": 0.875,
+    "non_drone_recall": 0.5975609756097561
+  },
+  "noise_model_definition": {
+    "error_level_scale": "p2 equals the requested combined/gate-only label; p1=p2/10; readout=p2/2. Readout-only uses p_readout=label/2.",
+    "gate_noise": "Aer depolarizing_error attached to transpiled u gates and cx gates",
+    "readout_noise": "symmetric independent bit-flip ReadoutError attached to every qubit",
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "shots": 1024,
+    "not_hardware_claim": "Controlled synthetic sensitivity model, not a characterization of any IBM backend.",
+    "seed_base": 42
+  }
+}

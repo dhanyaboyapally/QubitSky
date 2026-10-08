@@ -1,0 +1,15 @@
+{
+  "x_hash": "b6259c5a1cb9a88d239fff265f67e175c3025f700e7f779caff811e359958ff9",
+  "y_hash": "ee3058b51ed781153b56e4fda252648a61de54429409db9881410d4e325000e6",
+  "shape": [
+    80,
+    24
+  ],
+  "kernel": "CachedTrainableFidelityQuantumKernel",
+  "trainable_parameters": [
+    -0.30404135217687256,
+    1.3040413521768726,
+    -0.30404135217687256,
+    1.3040413521768726
+  ]
+}

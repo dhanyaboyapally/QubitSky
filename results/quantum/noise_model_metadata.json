@@ -1,0 +1,322 @@
+[
+  {
+    "noise_type": "combined",
+    "noise_label": "0pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.0,
+    "two_qubit_error": 0.0,
+    "readout_error": 0.0,
+    "shots": 1024,
+    "seed": 42,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0007308750064112246,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_0pct_1024shots_seed42.joblib"
+  },
+  {
+    "noise_type": "combined",
+    "noise_label": "0.1pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.0001,
+    "two_qubit_error": 0.001,
+    "readout_error": 0.0005,
+    "shots": 1024,
+    "seed": 43,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0008637499995529652,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_0.1pct_1024shots_seed43.joblib"
+  },
+  {
+    "noise_type": "combined",
+    "noise_label": "0.25pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.00025,
+    "two_qubit_error": 0.0025,
+    "readout_error": 0.00125,
+    "shots": 1024,
+    "seed": 44,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0004839580215048045,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_0.25pct_1024shots_seed44.joblib"
+  },
+  {
+    "noise_type": "combined",
+    "noise_label": "0.5pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.0005,
+    "two_qubit_error": 0.005,
+    "readout_error": 0.0025,
+    "shots": 1024,
+    "seed": 45,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0004949580179527402,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_0.5pct_1024shots_seed45.joblib"
+  },
+  {
+    "noise_type": "combined",
+    "noise_label": "1pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.001,
+    "two_qubit_error": 0.01,
+    "readout_error": 0.005,
+    "shots": 1024,
+    "seed": 46,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0004986659914720803,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_1pct_1024shots_seed46.joblib"
+  },
+  {
+    "noise_type": "combined",
+    "noise_label": "2pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.002,
+    "two_qubit_error": 0.02,
+    "readout_error": 0.01,
+    "shots": 1024,
+    "seed": 47,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0004850829718634486,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_2pct_1024shots_seed47.joblib"
+  },
+  {
+    "noise_type": "gate_only",
+    "noise_label": "gate_only_0p5pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.0005,
+    "two_qubit_error": 0.005,
+    "readout_error": 0.0,
+    "shots": 1024,
+    "seed": 142,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.0004846669908147305,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_gate_only_0p5pct_1024shots_seed142.joblib"
+  },
+  {
+    "noise_type": "readout_only",
+    "noise_label": "readout_only_0p5pct",
+    "error_level_interpretation": "target two-qubit depolarizing probability for combined/gate-only; target readout probability is half the label for readout-only",
+    "single_qubit_error": 0.0,
+    "two_qubit_error": 0.0,
+    "readout_error": 0.0025,
+    "shots": 1024,
+    "seed": 143,
+    "fidelity_definition": "global state fidelity; matched to Stage 5 ideal simulator",
+    "method": "Aer depolarizing errors on transpiled u/cx gates; symmetric independent readout flips",
+    "cache_hits": {
+      "training": true,
+      "validation": true,
+      "test": true
+    },
+    "kernel_times_seconds": {
+      "training": 0.0,
+      "validation": 0.0,
+      "test": 0.0
+    },
+    "kernel_evaluations": {
+      "training": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "estimated_fidelity_circuits": 4548,
+    "training_recording_ids_sha256": "6d930e716ad04b90cfec0976b6b155bd0105aefdd2cacd2f769d0fb1cfff78f2",
+    "validation_recording_ids_sha256": "2973665665e08fe9c86d7ac59912610933130a1432d9ff533a90a6d2aae893ec",
+    "test_recording_ids_sha256": "122fca9c88c1665437c95b09c1dd5c91b36a1c407a12253311ff02d6d842e4f0",
+    "trainable_parameters": [
+      -0.30404135217687256,
+      1.3040413521768726,
+      -0.30404135217687256,
+      1.3040413521768726
+    ],
+    "feature_map": "Stage 5 frozen trainable product feature map; parameterized values bound from Stage 5",
+    "classifier_fit_seconds": 0.00044995799544267356,
+    "fitted_model_path": "/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/models/quantum_noise/qsvc_4q24_readout_only_0p5pct_1024shots_seed143.joblib"
+  }
+]

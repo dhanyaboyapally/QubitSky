@@ -1,0 +1,45 @@
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 2f7ac18dc81a0ea21881 is silent in train; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording a6fd25ef37f81988adcf is silent in train; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 3964a8e92b9881208b72 is silent in train; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 8a3e2a6425c0e42ebec0 is silent in train; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 9ef249773ea3153b9b1d is silent in train; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 0f639b00af3a879a0db5 is silent in validation; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 31785d877d7429896327 is silent in test; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 891f10211e99b412ff7e is silent in test; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording 4991d83555f6b832df4e is silent in test; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+/Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/src/prepare_dataset.py:607: UserWarning: Target recording a11bb67fe5ee246f49eb is silent in test; keeping its clean sample and skipping its noisy derivatives.
+  create_split_noise_variants(
+Total source files: 6123
+Drone recordings: 4521
+Non-drone recordings: 1540
+Unique source recordings: 541
+Counts by source dataset:
+source_dataset  external_test
+ddl             False            5491
+esc50           False             480
+nasa_external   True               62
+svanstrom       False              90
+Split summary:
+        split  files  unique_recordings  drone_recordings  non_drone_recordings  noisy_clips                                 counts_by_source                                                                                           counts_by_scenario                                                 counts_by_snr  generated_noisy_clips_total
+        train  23620                301                35                   266        18892 {"ddl": 19220, "esc50": 3240, "svanstrom": 1160} {"airspace": 786, "battlefield/noisy-field": 786, "infrastructure": 922, "perimeter": 866, "wildlife": 1388} {"0": 4723, "10": 4723, "20": 4723, "5": 4723, "clean": 4728}                        27204
+   validation   5041                 80                14                    66         4032    {"ddl": 4115, "esc50": 666, "svanstrom": 260}  {"airspace": 190, "battlefield/noisy-field": 190, "infrastructure": 100, "perimeter": 170, "wildlife": 256} {"0": 1008, "10": 1008, "20": 1008, "5": 1008, "clean": 1009}                        27204
+         test   5354                 98                16                    82         4280    {"ddl": 4120, "esc50": 854, "svanstrom": 380}  {"airspace": 420, "battlefield/noisy-field": 420, "infrastructure": 170, "perimeter": 152, "wildlife": 332} {"0": 1070, "10": 1070, "20": 1070, "5": 1070, "clean": 1074}                        27204
+nasa_external   1088                 62                 0                     0            0                          {"nasa_external": 1088}                                                                                                           {}                                               {"clean": 1088}                        27204
+Generated noisy clips included: 27204
+Train/test recording_id intersection: 0
+Train/validation recording_id intersection: 0
+Validation/test recording_id intersection: 0
+Noisy derivatives crossing splits: 0
+NASA rows in train/validation/ranking/scaler fit: 0/0/0/0
+Top 4 features -> 4 qubits: mfcc_2_mean, spectral_flatness_mean, spectral_bandwidth_mean, mfcc_1_mean
+Top 5 features -> 5 qubits: mfcc_2_mean, spectral_flatness_mean, spectral_bandwidth_mean, mfcc_1_mean, rms_energy_mean
+Top 6 features -> 6 qubits: mfcc_2_mean, spectral_flatness_mean, spectral_bandwidth_mean, mfcc_1_mean, rms_energy_mean, spectral_centroid_mean

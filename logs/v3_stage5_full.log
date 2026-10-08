@@ -1,0 +1,21 @@
+STAGE 5 INITIAL ESTIMATE: 4 qubits, 24 balanced recordings, clean, validation=80, test=98, estimated fidelity evaluations<=17268
+ESTIMATE fixed_qsvc: qubits=4, train_recordings=24, validation_recordings=80, test_recordings=98, evaluations<=4548, feature_map=zz_reps1_linear, seed=42
+ESTIMATE trainable_qsvc: qubits=4, train_recordings=24, validation_recordings=80, test_recordings=98, evaluations<=7860, feature_map=trainable_product_reps1_linear, seed=42
+STAGE 5 INITIAL TEST COMPARISON
+         model  accuracy       f1  balanced_accuracy  drone_recall  non_drone_recall
+       rbf_svm  0.683673 0.491803           0.785823        0.9375          0.634146
+     small_mlp  0.734694 0.409091           0.665396        0.5625          0.768293
+    fixed_qsvc  0.632653 0.307692           0.579268        0.5000          0.658537
+trainable_qsvc  0.642857 0.444444           0.736280        0.8750          0.597561
+ESTIMATE fixed_qsvc: qubits=4, train_recordings=24, validation_recordings=80, test_recordings=98, evaluations<=13956, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=4, train_recordings=50, validation_recordings=80, test_recordings=98, evaluations<=29725, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=4, train_recordings=70, validation_recordings=80, test_recordings=98, evaluations<=42315, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=5, train_recordings=24, validation_recordings=80, test_recordings=98, evaluations<=13956, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=5, train_recordings=50, validation_recordings=80, test_recordings=98, evaluations<=29725, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=5, train_recordings=70, validation_recordings=80, test_recordings=98, evaluations<=42315, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=6, train_recordings=24, validation_recordings=80, test_recordings=98, evaluations<=13956, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=6, train_recordings=50, validation_recordings=80, test_recordings=98, evaluations<=29725, feature_map=zz_reps1_linear, seed=42
+ESTIMATE fixed_qsvc: qubits=6, train_recordings=70, validation_recordings=80, test_recordings=98, evaluations<=42315, feature_map=zz_reps1_linear, seed=42
+Stage 5 results saved to /Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/ideal_simulator_results.csv
+Kernel matrices cached under /Users/srikarreddy/Documents/hackathon/hackathon3/QSky-Mizzou-Quantum-Hackathon/results/quantum/kernels
+{'initial_rows': 12, 'expanded_rows': 125, 'expanded': True}

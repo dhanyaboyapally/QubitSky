@@ -1,0 +1,22 @@
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+secrets/ibm_quantum.env
+
+# Downloaded recordings and generated datasets/results stay local.
+data/raw/*
+!data/raw/**/.gitkeep
+data/filtered/*
+!data/filtered/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/noisy/*
+!data/noisy/.gitkeep
+data/features/*
+!data/features/.gitkeep
+results/*
+!results/.gitkeep
+models/*
+!models/.gitkeep
